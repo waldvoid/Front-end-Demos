@@ -1,0 +1,96 @@
+/* reset and main dec. */
+html, body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+}
+
+body *:not(style):not(script):not(div) {
+  all:unset;
+}
+
+/* header box */
+header div {
+  margin: 10svh 10svw 0 10svw;
+  background: #FC466B;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(63, 94, 251, .2);
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 23px;
+
+}
+
+/* main container */
+.container {
+  padding: 40px 20px;
+  display: grid;
+  gap: 40px;
+  margin: 4svw 10svw 10svh 10svw;
+  background-color: rgba(63, 94, 251, .2);
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(63, 94, 251, .3);
+}
+
+/* container item boxes */
+.item {
+  display: flex;
+  gap: 30px;
+}
+
+/* title format */
+.item .item-children:last-child h6 {
+  display: block;
+  color: #514A9D;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* paragraph format */
+.item .item-children:last-child p {
+  display: block;
+  line-height: 150%;
+  font-size: 14px;
+}
+
+/* day text - first div formatting -  */
+.item .item-children:first-child {
+  width: 100px;
+  flex-shrink: 0;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* day text - day text div formatting -  */
+.item .item-children:first-child .day {
+  width: 100%;
+  height: 50px;
+  color: #514A9D;
+  background-color: white;
+  font-weight: bold;
+  border: 1px solid rgba(63, 94, 251, .2);
+  font-size: 15px;
+  box-shadow: 0 0 5px 0 rgba(63, 94, 251, .2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* adding dotted lines with after and repeaing linear gradient */
+/* removing last dotted line with not */
+.item:not(:last-child) .item-children:first-child::after {
+  flex: 1;
+  content: '';
+  width: 2px;
+  background: repeating-linear-gradient(#514A9D 1px 5px, transparent 8px 9px);
+}
+
