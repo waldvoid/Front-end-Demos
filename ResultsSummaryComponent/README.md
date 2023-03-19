@@ -12,7 +12,7 @@ This is results summary component made with HTML & CSS.
 ### Screenshots
 
 <img src="design/Results_Summary_Component_Desktop.png">
-<img src="design/Results_Summary_Component_Mobile.png" style="height: 50vh; display: block; margin: 0 auto;">
+<img src="design/Results_Summary_Component_Mobile.png" style=" display: block; margin: 0 auto;">
 
 ### Links
 
