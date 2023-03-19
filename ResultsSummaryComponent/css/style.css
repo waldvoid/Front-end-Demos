@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Hanken Grotesk Static';
+    src: url('static/HankenGrotesk-Medium.ttf') format('ttf'),
+    url('static/HankenGrotesk-ExtraBold.ttf') format('ttf'),
+    url('static/HankenGrotesk-Bold.ttf') format('ttf');
+}
+
+body *:not(style):not(script):not(div) {
+    all: unset;
+}
+
+html {
+    font-size: 16px;
+    background-color: hsl(221, 100%, 96%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem; /* 16px */
+    font-family: "Hanken Grotesk", "Hanken Grotesk Static", sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: 30vh 16vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.abs-container {
+    position: relative;
+    align-self: flex-start;
+}
+
+.score-container {
+    position: absolute;
+    width: 13em;
+    height: 20em;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(46, 43, 233);
+    background: linear-gradient(360deg, rgba(46, 43, 233, 1) 0%, rgba(120, 87, 255, 1) 180%);
+    border-radius: 1em;
+    padding: 2em;
+    gap: 1em;
+    flex: 1 1 0;
+}
+
+.score-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 9.5em;
+    height: 9.5em;
+    border-radius: 50%;
+    background: rgb(35, 32, 201);
+    background: linear-gradient(0deg, rgba(77, 32, 201, 0) 0%, rgba(35, 32, 201, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 2px 0;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    flex: 2 1 auto;
+    padding: 1em 1em 1em 18em;
+    height: 22em;
+    max-width: 20vw;
+    border-radius: 1em;
+    gap: 1.1em;
+
+}
+
+/* summary title */
+.summary-container > div:first-child {
+    font-weight: 700;
+    margin-left: .5em;
+    margin-top: .2em;
+    font-size: 1.1rem;
+    color: hsl(224, 30%, 27%);
+
+}
+
+/* button */
+.summary-container > a:last-child {
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 2em;
+    padding: .9em;
+    margin: 0 .3em;
+    font-weight: 500;
+    align-self: stretch;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+}
+
+.summary-container > a:last-child:hover {
+    cursor: pointer;
+    background: rgb(46, 43, 233);
+    background: linear-gradient(360deg, rgba(46, 43, 233, 1) 0%, rgba(120, 87, 255, 1) 180%);
+}
+
+
+.summary-details-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding: 0 1em .2em 1em;
+    gap: .6em;
+}
+
+.summary-details-item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: .9em .6em;
+    align-items: center;
+    border-radius: .4em;
+}
+
+.summary-details-item:nth-child(1) {
+    background-color: hsl(0, 100%, 95%);
+    color: hsl(0, 100%, 67%);
+}
+
+.summary-details-item:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, 20%);
+    color: hsl(39, 100%, 56%);
+}
+
+.summary-details-item:nth-child(3) {
+    background-color: hsl(221, 100%, 96%);
+    color: hsl(166, 100%, 37%);
+}
+
+.summary-details-item:nth-child(4) {
+    background-color: hsla(241, 100%, 89%, 60%);
+    color: hsl(234, 85%, 45%);
+}
+
+.summary-item-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary-item-title p {
+    padding-left: .7em;
+    font-weight: 800;
+    font-size: .85rem;
+}
+
+.summary-item-score span:first-child {
+    font-weight: 800;
+}
+
+.summary-item-score span:last-child {
+    color: hsla(224, 30%, 27%, 50%);
+    font-weight: 700;
+}
+
+.summary-item-score span {
+    font-size: .85rem;
+}
+
+.score-container > div:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: hsla(241, 100%, 89%, 70%)
+}
+
+.score-circle > p:first-child {
+    font-weight: 800;
+    font-size: 4rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.score-circle > p:last-child {
+    color: hsla(241, 100%, 89%, 70%);
+}
+
+.score-container > div:nth-child(3) {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+}
+
+.score-container > div:nth-child(4) {
+    font-size: .9rem;
+    color: hsla(241, 100%, 89%, 70%);
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 875px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .abs-container {
+        width: 100%;
+        height: 48vh;
+    }
+
+    .score-container {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 2em 2em;
+    }
+
+    .summary-container {
+        flex: 2 1 auto;
+        padding: 1em 2em;
+        height: 100%;
+        align-self: stretch;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+}
