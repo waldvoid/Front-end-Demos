@@ -16,8 +16,8 @@ This is results summary component made with HTML & CSS.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](rsccomponent-merte.netlify.app)
+- Repo URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/ResultsSummaryComponent)
+- Live Site URL: [Live Page](rsccomponent-merte.netlify.app)
 
 ### Built with
 
