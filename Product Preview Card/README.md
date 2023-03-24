@@ -17,7 +17,7 @@ This is results summary component made with HTML & CSS.
 ### Links
 
 - Repository URL: [Github Repository]()
-- Live Site URL: [Live Page](ppcard-merte.netlify.app)
+- Live Site URL: [Live Page] (https://ppcard-merte.netlify.app)
 
 ### Built with
 
