@@ -16,32 +16,68 @@ body {
 .item {
     margin: 10svh 5svw;
     display: flex;
-
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: .5em;
+    border-radius: .6em;
     background-color: hsl(0, 0%, 100%);
 }
 
 .item-image {
     width: 100%;
-    height: 35svh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
 }
 
-.item-image img {
-    width: 100%;
-    height: 100%;
+.item-image>img:first-child {
+    min-width: 100%;
+    max-height: 100%;
     object-fit: cover;
-    border-radius: .5em .5em  0 0;
+    border-radius: .6em .6em  0 0;
+}
+.item-image>img:last-child {
+    display: none;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .item {
+        flex-direction: row;
+        margin: 20svh auto;
+        width: 60%;
+        height: 55svh;
+    }
+    .item-image {
+        min-height: 100%;
+        width: 68em;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+    .item-image>img:first-child {
+        display: none;
+    }
+    .item-image>img:last-child {
+        display: unset;
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        border-radius: .6em 0 0 .6em;
+    }
+    .item-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 
 .item-text {
-    padding: 0 1.5em;
+    padding: 0 1.8em;
 }
 
 .item-text p {
@@ -54,14 +90,18 @@ body {
     letter-spacing: .3rem;
     font-size: .9rem;
     font-weight: 500;
+    margin-top: .5em;
+}
 
+.item-text > p:nth-child(3){
+    line-height: 1.7em;
 }
 
 .item-text h2 {
     font-family: 'Fraunces', serif;
     color: hsl(212, 21%, 14%);
     font-size: 2.2rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
 }
 
 .item-text-price {
@@ -90,14 +130,18 @@ body {
 
 .item-button {
     background-color: hsl(158, 36%, 37%);
-    padding: 1rem;
+    padding: 1.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1.5rem 1.5rem 1.5rem;
+    margin: .5em 0 2em 0;
     border-radius: .6em;
     font-weight: 700;
     gap: .9em
+}
+
+.item-button:hover {
+   background-color: hsl(212, 21%, 14%);
 }
 
 a {
