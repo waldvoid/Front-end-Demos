@@ -23,4 +23,4 @@ This is results summary component made with HTML & CSS.
 ### Screenshots
 
 <img src="design/desktop.png">
-<img src="design/mobile.png" style="max-height:50%; margin: 0 auto;">
+<img src="design/mobile.png" style="margin: 0 auto;">
