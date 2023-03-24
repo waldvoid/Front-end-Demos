@@ -12,12 +12,12 @@ This is results summary component made with HTML & CSS.
 ### Screenshots
 
 <img src="design/desktop.png">
-<img src="design/mobile.png" style="width: 50vh;  display: block; margin: 0 auto;">
+<img src="design/mobile.png" style="margin: 0 auto;">
 
 ### Links
 
-- Repository URL: [Github Repository]()
-- Live Site URL: [Live Page] (https://ppcard-merte.netlify.app)
+- Repository URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/Product%20Preview%20Card)
+- Live Site URL: [Live Page](https://ppcard-merte.netlify.app)
 
 ### Built with
 
