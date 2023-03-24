@@ -21,6 +21,7 @@ This is results summary component made with HTML & CSS.
 - Flexbox
 
 ### Screenshots
-
+<div style="display: flex; justfiy-content: center; align-items: center; flex-wrap: nowrap;>
 <img src="design/desktop.png">
 <img src="design/mobile.png" style="margin: 0 auto;">
+                                                    </div>
