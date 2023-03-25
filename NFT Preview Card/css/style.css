@@ -48,7 +48,7 @@ body {
     gap: 1em;
 }
 
-.item-text>p:nth-child(1) {
+h1 {
     color: hsl(0, 0%, 100%);
     font-weight: 600;
     font-size: 1.2rem;
