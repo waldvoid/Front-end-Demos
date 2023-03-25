@@ -29,7 +29,7 @@ body {
 }
 
 .item-image{
-    padding: 1.3em;
+    margin: 1.3em;
 }
 
 .item-image img {
@@ -125,8 +125,8 @@ h1 {
         content: url("../images/icon-view.svg");
         background: hsla(178, 100%, 50%, 40%);
         border-radius: .5em;
-        width: 86%;
-        height: 85%;
+        width: 100%;
+        height: 98.5%;
         display: none;
     }
 
