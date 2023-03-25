@@ -1,0 +1,144 @@
+html {
+    font-size: 18px;
+    background-color: hsl(217, 54%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem; /* 14px */
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.item {
+    background-color: hsl(216, 50%, 16%);
+    margin: 0 6vw;
+    border-radius: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-image{
+    padding: 1.3em;
+}
+
+.item-image img {
+    max-width: 21em;
+    width: 100%;
+    border-radius: .5em;
+    object-fit: cover;
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 1.3em 1.3em 1.3em;
+    gap: 1em;
+}
+
+.item-text>p:nth-child(1) {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.item-text>p:nth-child(2) {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: .85rem;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-details > div {
+    display: flex;
+    gap: .5em;
+}
+
+.item-details > div:first-child {
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+    font-size: .85rem;
+}
+
+.item-details > div:last-child {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: .85rem;
+}
+
+.item-seperator {
+    border-top: 1px solid hsl(215, 51%, 70%);
+    width: 100%;
+}
+
+.item-user {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    gap: .8em
+}
+
+.item-user img {
+    width: 2em;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50%;
+}
+
+.item-user p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: .85rem;
+}
+
+.item-user span {
+    color: hsl(0, 0%, 100%);
+}
+
+@media only screen and (min-width: 768px) {
+    .item {
+        max-width: 19em;
+    }
+    .item-image{
+        position: relative;
+    }
+
+    .item-image::before {
+        position: absolute;
+        z-index: 1;
+        content: url("../images/icon-view.svg");
+        background: hsla(178, 100%, 50%, 40%);
+        max-width: 21em;
+        max-height: 21em;
+        border-radius: .5em;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .item-image:hover::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: all;
+
+
+    }
+}
+
