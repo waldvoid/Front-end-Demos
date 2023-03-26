@@ -11,7 +11,7 @@ This is results summary component made with HTML, CSS & Javascript.
 
 ### Links
 
-- Repository URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/Interactive%20Rating%20Component)
+- Repository URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/Ping%20Coming%20Soon%20Page)
 - Live Site URL: [Live Page](https://pingpage-merte.netlify.app)
 
 ### Built with
