@@ -11,7 +11,7 @@ This is results summary component made with HTML, CSS & Javascript.
 
 ### Links
 
-- Repository URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/NFT%20Preview%20Card)
+- Repository URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/Interactive%20Rating%20Component)
 - Live Site URL: [Live Page](https://ratingcomponent-merte.netlify.app)
 
 ### Built with
