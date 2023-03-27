@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!emailValidation.checkValidity()) {
             emailInvalidError.style.opacity = "1";
             emailInvalidError.style.margin= ".5em 0 1.5em 0";
+            // error message
+            document.getElementById("email-invalid").innerHTML = "Please provide a valid email address";
+            // screen-reader aria attribute error message
+            document.getElementById("email-invalid").setAttribute("aria-describedby", "Invalid Email Adress");
         } else {
             emailInvalidError.style.opacity = "0";
             emailInvalidError.style.margin = "0";
