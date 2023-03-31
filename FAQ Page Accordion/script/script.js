@@ -3,6 +3,7 @@ function add(item, accordionText) {
     setTimeout(function() {
         // time interval for transition into accordion-item::after
         item.classList.add("rotate");
+        item.querySelector(".accordion-title").style.fontWeight = "700";
         accordionText.style.maxHeight = "100%";
         accordionText.style.paddingTop = "1em";
         accordionText.style.overflow = "visible";
@@ -11,13 +12,14 @@ function add(item, accordionText) {
 
         // accessibility
         accordionText.ariaHidden = "false";
-        item.querySelector("#accordion-h2").ariaExpanded = "true";
+        item.querySelector(".accordion-title").ariaExpanded = "true";
     }, 100);
 }
 
 function remove(item, accordionText) {
         // time interval for transition into accordion-item::after
         item.classList.remove("rotate");
+        item.querySelector(".accordion-title").style.fontWeight = "400";
         accordionText.style.maxHeight = "0";
         accordionText.style.overflow = "hidden";
         accordionText.style.paddingTop = "0";
@@ -25,7 +27,7 @@ function remove(item, accordionText) {
 
         // accessibility
         accordionText.ariaHidden = "true";
-        item.querySelector("#accordion-h2").ariaExpanded  = "false";
+        item.querySelector(".accordion-title").ariaExpanded  = "false";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -50,13 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     setTimeout(function () {
                         let accordionText = accordionItems[i].querySelector(".accordion-text");
                         accordionItems[i].classList.remove("rotate");
+                        accordionItems[i].querySelector(".accordion-title").style.fontWeight = "400";
                         accordionText.style.maxHeight = "0";
                         accordionText.style.overflow = "hidden";
                         accordionText.style.paddingTop = "0";
                         accordionText.style.opacity = "0";
                         // accessibility
                         accordionText.ariaHidden = "true";
-                        accordionItems[i].querySelector("#accordion-h2").ariaExpanded = "false";
+                        accordionItems[i].querySelector(".accordion-title").ariaExpanded = "false";
                     }, 100);
                 }
                 add(item, accordionText);
