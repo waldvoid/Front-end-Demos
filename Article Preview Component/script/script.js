@@ -8,10 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!sharePanel.classList.contains("visible")) {
                 sharePanel.classList.add("visible");
                 sharePanel.ariaHidden = "false";
+                sharePanel.tabIndex = "0";
 
             } else if (sharePanel.classList.contains("visible")){
                 sharePanel.classList.remove("visible");
                 sharePanel.ariaHidden = "true";
+                sharePanel.tabIndex = "-1";
             }
         }, 100);
     })
