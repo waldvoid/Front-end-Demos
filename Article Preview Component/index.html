@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="script/script.js"></script>
-  <script src="https://kit.fontawesome.com/c73c40b9f8.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+	<link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="script/script.js"></script>
+	<script crossorigin="anonymous" src="https://kit.fontawesome.com/c73c40b9f8.js"></script>
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 
-  <title>Article Preview Component</title>
+	<title>Article Preview Component</title>
 
 </head>
 <body>
+<!-- container starts -->
 <main class="article-container">
-  <div class="article-image">
-    <img src="images/drawers.jpg" alt="green drawers in a cozy home">
-  </div>
-  <article class="article-text">
-    <h1>Shift the overall look and feel by adding these wonderful
-      touches to furniture in your home</h1>
-    <p>Ever been in a room and felt like something was missing? Perhaps
-      it felt slightly bare and uninviting. I’ve got some simple tips
-      to help you make any room feel complete.</p>
-  </article>
-  <div class="article-footer">
-  <div class="article-info">
-    <div class="article-author-avatar">
-      <a href="#"><img src="images/avatar-michelle.jpg" alt="article author avatar"></a>
-    </div>
-    <aside class="article-info-details">
-      <h2 class="article-author-name"><a href="#">Michelle Appleton</a></h2>
-      <p class="article-date">28 Jun 2020</p>
-    </aside>
-  </div>
-  <div class="article-info-button" id="share-button">
-    <button aria-label="Share article"><i class="fa-solid fa-share"></i></button>
-  </div>
-  <div class="article-info-social" id="share-panel" aria-hidden="true" tabindex="-1" role="dialog">
-    <p aria-hidden="true">Share</p>
-    <a href="#" target="_blank" aria-label="Share on Facebook" class="facebook-icon"><i title="Share on Facebook" class="fa-brands fa-square-facebook"></i></a>
-    <a href="#" target="_blank" aria-label="Share on Twitter" class="twitter-icon"><i title="Share on Twitter" class="fa-brands fa-twitter"></i></a>
-    <a href="#" target="_blank" aria-label="Share on Pinterest" class="pinterest-icon"><i title="Share on Pinterest" class="fa-brands fa-pinterest"></i></a>
-  </div>
-  </div>
+	<!-- image starts -->
+	<div class="article-image">
+		<img alt="green drawers in a cozy home" src="images/drawers.jpg">
+	</div>
+	<!-- image ends -->
+	<!-- article text starts -->
+	<article class="article-text">
+		<h1>Shift the overall look and feel by adding these wonderful
+		    touches to furniture in your home</h1>
+		<p>Ever been in a room and felt like something was missing? Perhaps
+		   it felt slightly bare and uninviting. I’ve got some simple tips
+		   to help you make any room feel complete.</p>
+	</article>
+	<!-- article text ends -->
+	<!-- article footer starts -->
+	<!-- article footer author starts -->
+	<div class="article-footer">
+		<div class="article-info">
+			<div class="article-author-avatar">
+				<a href="#"><img alt="article author avatar" src="images/avatar-michelle.jpg"></a>
+			</div>
+			<aside class="article-info-details">
+				<h2 class="article-author-name"><a href="#">Michelle Appleton</a></h2>
+				<p class="article-date">28 Jun 2020</p>
+			</aside>
+		</div>
+		<!-- article footer author starts -->
+		<!-- article footer interactive social media share panel starts -->
+		<div class="article-share-button-wrapper">
+			<div class="article-share-button" id="share-button">
+				<button aria-label="Share article"><i class="fa-solid fa-share"></i></button>
+			</div>
+			<div aria-hidden="true" class="article-share-social" id="share-panel" role="dialog" tabindex="-1">
+				<p aria-hidden="true">Share</p>
+				<a aria-label="Share on Facebook" class="facebook-icon" href="#" target="_blank"><i
+						class="fa-brands fa-square-facebook" title="Share on Facebook"></i></a>
+				<a aria-label="Share on Twitter" class="twitter-icon" href="#" target="_blank"><i
+						class="fa-brands fa-twitter" title="Share on Twitter"></i></a>
+				<a aria-label="Share on Pinterest" class="pinterest-icon" href="#" target="_blank"><i
+						class="fa-brands fa-pinterest" title="Share on Pinterest"></i></a>
+			</div>
+		</div>
+		<!-- article footer interactive social media share panel starts -->
+	</div>
+	<!-- artictle footer ends -->
 </main>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </body>
