@@ -1,0 +1,238 @@
+html {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100svh;
+    padding: 6em 2em;
+}
+
+a {
+    color: inherit;
+}
+
+.article-container {
+    background-color: white;
+    width: 100%;
+    border-radius: 1em;
+}
+
+.article-image {
+    width: 100%;
+}
+
+.article-image img {
+    width: 100%;
+    height: 16em;
+    object-fit: cover;
+    object-position: 0 -2em;
+    border-radius: 1em 1em 0 0;
+}
+
+.article-text {
+    padding: 3em 2em 3em 2em;
+    text-align: start;
+}
+
+.article-text h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.article-text p{
+    padding-top: 1.2em;
+    color: hsl(217, 19%, 35%);
+    line-height: 1.6;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: relative;
+}
+
+.article-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    line-height: 1.5em;
+}
+
+.article-author-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.article-date {
+    font-size: 1rem;
+    color: hsl(212, 23%, 69%);
+}
+
+
+.article-author-avatar img {
+
+    height: 3.4em;
+    border-radius: 50%;
+    transition: .3s transform, .3s box-shadow linear;
+
+}
+
+.article-author-avatar img:hover {
+    transform: scale(105%);
+    box-shadow: rgba(60, 64, 67, 0.3) 0 1px 1px 0, rgba(60, 64, 67, 0.15) 0 2px 2px 0;
+}
+
+.article-info-button {
+    width: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.article-info-button button:hover {
+    background-color: hsl(214, 17%, 51%);
+    cursor: pointer;
+}
+
+.article-info-button button {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: hsl(210, 46%, 95%);
+    border: none;
+}
+
+.article-info-button i {
+    font-size: 1.3rem;
+    color: hsl(214, 17%, 51%);
+}
+
+.article-info-button button:hover i {
+    color: hsl(210, 46%, 95%);
+}
+
+.article-info-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2em;
+    border-radius: 0 0 1em 1em;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.facebook-icon, .twitter-icon, .pinterest-icon {
+    color: white;
+    font-size: 2rem;
+    padding: 0 .3em;
+    cursor: pointer;
+}
+
+.facebook-icon:hover, .twitter-icon:hover, .pinterest-icon:hover {
+    color: hsl(212, 23%, 69%);
+    font-size: 2rem;
+    padding: 0 .3em;
+}
+
+.article-info-social p {
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 1.1rem;
+    padding-right: 1em;
+    user-select: none;
+}
+
+.article-info-social.visible {
+    display: flex;
+}
+
+@media only screen and (min-width: 992px) {
+    body {
+        padding: 0 25%;
+    }
+
+    .article-container {
+     display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-areas: 'image text text' 'image text text' 'image footer footer';
+    }
+
+    .article-image {
+        grid-area: image;
+    }
+
+    .article-image img {
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 0;
+        border-radius: 1em 0 0 1em;
+    }
+
+    .article-text {
+        padding: 3em 6em 3em 3.6em;
+        grid-area: text;
+    }
+
+
+    .article-footer {
+        padding: 0 3.7em 3em 3.6em;
+        grid-area: footer;
+    }
+
+
+    .article-info-social.visible {
+        opacity: 100%;
+    }
+
+    .article-info-social {
+        width: 60%;
+        height: 60%;
+        left: 54%;
+        top: -85%;
+        display: flex;
+        opacity: 0;
+        border-radius: .7em;
+        transition: .2s opacity linear;
+    }
+
+    .article-info-social::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 1em solid transparent;
+        border-right: 1em solid transparent;
+        border-top: 1em solid hsl(217, 19%, 35%);;
+        background-color: transparent;
+        left: 42%;
+        top: 100%;
+    }
+
+}
