@@ -1,0 +1,223 @@
+html {
+	font-size: 16px;
+	font-weight: 400;
+	color: white;
+
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: hsl(0, 100%, 74%);
+	background-image: url('/images/bg-intro-mobile.png');
+}
+
+a {
+	color: inherit;
+}
+
+input, button {
+	font-family: 'Poppins', sans-serif;
+}
+
+.index-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	min-height: 100svh;
+	padding: 4em 2em;
+}
+
+.index-main {
+	display: grid;
+	grid-template: 'benefits benefits benefits benefits'
+	'signup-section signup-section signup-section signup-section';
+	gap: 3em;
+
+}
+
+.signup-benefits {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	gap: 1em;
+	grid-area: benefits;
+}
+
+.signup-benefits h1 {
+	font-size: 1.8rem;
+}
+
+.signup-cta {
+	color: hsl(246, 25%, 77%);
+}
+
+.signup-cta span {
+	font-weight: 700;
+	color: white;
+}
+
+.signup-section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+	grid-area: signup-section;
+}
+
+.signup-cta {
+	padding: 1em 3em;
+	text-align: center;
+	border-radius: .6em;
+	background-color: hsl(248, 32%, 49%);
+	box-shadow: rgba(0, 0, 0, 0.2) 0 7px 0;
+}
+
+.signup-cta span {
+	font-weight: 600;
+}
+
+.signup-section form {
+	padding: 1.5em;
+	border-radius: .6em;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 7px 0;
+}
+
+.signup-section ul {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	flex-direction: column;
+	justify-content: center;
+	list-style-type: none;
+	gap: 1em;
+}
+
+.signup-section input {
+	font-weight: 700;
+	width: 100%;
+	height: 4em;
+	padding: 1em 1.3em;
+	border: 1px solid hsl(246, 25%, 77%);
+	border-radius: .4em;
+}
+
+.signup-section input::placeholder {
+	font-weight: 600;
+	color: hsl(249, 10%, 26%);
+}
+
+.signup-section input:focus {
+	border: 2px solid hsl(249, 10%, 26%);
+}
+
+.signup-section li.error::after {
+	position: absolute;
+	left: 85%;
+	display: unset;
+	width: 100%;
+	height: 5em;
+	margin-top: .8em;
+	content: url('../images/icon-error.svg');
+}
+
+.signup-section li.error::before {
+	position: absolute;
+	left: 80%;
+	display: unset;
+	width: 100%;
+	height: 5em;
+	margin-top: 3.5em;
+	content: 'lalallaa';
+	color: hsl(0, 100%, 74%);
+}
+
+.button button {
+	font-size: 1rem;
+	font-weight: 500;
+	width: 100%;
+	height: 4em;
+	padding-top: .2em;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: white;
+	border: unset;
+	border-radius: .4em;
+	background-color: hsl(154, 59%, 51%);
+	box-shadow: hsla(154, 29%, 51%, 90%) 0 3px 1px;
+}
+
+.button button:hover {
+	transition: .1s background-color, .1s box-shadow ease-in;
+	background-color: hsl(0, 100%, 74%);
+	box-shadow: hsla(0, 100%, 54%, 90%) 0 3px 1px;
+
+}
+
+#terms-agreement {
+	font-size: .7rem;
+	margin-top: 1.5em;
+	text-align: center;
+	color: hsl(246, 25%, 77%);
+}
+
+#terms-agreement span {
+	font-weight: 600;
+	color: hsl(0, 100%, 74%);
+}
+
+@media only screen and (min-width: 860px) {
+	body {
+		background-image: url('/images/bg-intro-desktop.png');
+	}
+
+	.index-container {
+		padding: 4em 8em;
+	}
+
+	.index-main {
+		display: grid;
+		grid-template: 'benefits benefits benefits benefits benefits benefits signup-section signup-section signup-section signup-section signup-section signup-section';
+		gap: 3em;
+		grid-template-columns:  repeat(6, 1fr) repeat(6, .7fr);
+	}
+
+	.signup-benefits {
+		align-items: flex-start;
+		justify-content: center;
+		text-align: start;
+		gap: 2em;
+	}
+
+	.signup-benefits h1 {
+		font-size: 4rem;
+		line-height: 1.2;
+	}
+
+	.signup-benefits p {
+		font-size: 1.2rem;
+		line-height: 1.6;
+	}
+
+	.signup-section {
+		align-items: stretch;
+	}
+
+	.signup-section form {
+		padding: 3em 2.5em;
+	}
+}
+
