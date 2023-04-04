@@ -2,7 +2,6 @@ html {
 	font-size: 16px;
 	font-weight: 400;
 	color: white;
-
 }
 
 * {
@@ -10,7 +9,6 @@ html {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
-
 }
 
 body {
@@ -42,7 +40,6 @@ input, button {
 	grid-template: 'benefits benefits benefits benefits'
 	'signup-section signup-section signup-section signup-section';
 	gap: 3em;
-
 }
 
 .signup-benefits {
@@ -120,29 +117,58 @@ input, button {
 	color: hsl(249, 10%, 26%);
 }
 
+.error input::placeholder {
+	color: hsl(0, 100%, 74%);
+}
+
 .signup-section input:focus {
+	transition: .1s border, .1s box-shadow linear;
 	border: 2px solid hsl(249, 10%, 26%);
+	outline: 0;
+	box-shadow: hsla(249, 10%, 26%, 55%) 0 2px 0 1px;
+}
+
+li {
+	transition: .5s padding-bottom ease;
+}
+
+li.error {
+	padding-bottom: 5%;
+}
+
+.signup-section li.error input:focus {
+	border: 2px solid hsl(0, 100%, 74%);
+	box-shadow: hsla(0, 100%, 74%, 55%) 0 2px 0 1px;
+}
+
+li.error input {
+	color: hsl(0, 100%, 74%);
+	border: 2px solid hsl(0, 100%, 74%);
 }
 
 .signup-section li.error::after {
 	position: absolute;
-	left: 85%;
-	display: unset;
-	width: 100%;
-	height: 5em;
+	left: 86%;
 	margin-top: .8em;
 	content: url('../images/icon-error.svg');
 }
 
 .signup-section li.error::before {
+	font-size: .6rem;
 	position: absolute;
-	left: 80%;
-	display: unset;
 	width: 100%;
-	height: 5em;
-	margin-top: 3.5em;
-	content: 'lalallaa';
+	max-height: 100%;
+	margin-top: 6em;
+	text-align: end;
 	color: hsl(0, 100%, 74%);
+}
+
+.signup-section li.email::before {
+	content: 'Looks like this is not an email';
+}
+
+.signup-section li.text::before {
+	content: var(--before-content, 'default value');
 }
 
 .button button {
@@ -152,6 +178,7 @@ input, button {
 	height: 4em;
 	padding-top: .2em;
 	cursor: pointer;
+	transition: .2s translate, .2s background-color, .2s box-shadow, .2s scale ease;
 	text-transform: uppercase;
 	color: white;
 	border: unset;
@@ -161,10 +188,14 @@ input, button {
 }
 
 .button button:hover {
-	transition: .1s background-color, .1s box-shadow ease-in;
 	background-color: hsl(0, 100%, 74%);
-	box-shadow: hsla(0, 100%, 54%, 90%) 0 3px 1px;
+	box-shadow: hsla(0, 170%, 54%, 40%) 5px 6px 1px;
+}
 
+.button button:active {
+	box-shadow: hsla(0, 100%, 54%, 90%) 0 1px 3px;
+	scale: 99%;
+	translate: 1% 2.5%
 }
 
 #terms-agreement {

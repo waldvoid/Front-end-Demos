@@ -4,41 +4,38 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<!-- displays site properly based on user's device -->
-
 	<link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 	<link href="css/style.css" rel="stylesheet">
 	<script src="script/script.js"></script>
 	<link href="https://fonts.googleapis.com" rel="preconnect">
-	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	<title>Intro Component with Sign Up Form</title>
-
 
 </head>
 <body>
 <div class="index-container">
 	<main class="index-main">
-		<article class="signup-benefits">
+		<div class="signup-benefits" role="">
 			<h1>Learn to code by watching others</h1>
 			<p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
 			   but understanding how developers think is invaluable.</p>
-		</article>
+		</div>
 		<div class="signup-section">
 			<div class="signup-cta"><span>Try it free 7 days</span> then $20/mo. thereafter</div>
-			<form action="#" method="post">
+			<form action="#" id="signup-form" method="post" novalidate role="form">
 				<ul>
-					<li class="error">
+					<li>
 						<input aria-label="first name" id="first-name-input" placeholder="First Name" required
 						       type="text">
 					</li>
-					<li class="error">
+					<li>
 						<input aria-label="last name" id="last-name-input" placeholder="Last Name" required type="text">
 					</li>
-					<li class="error">
-						<input aria-label="email" id="email-input" placeholder="Email Adress" required type="email">
+					<li>
+						<input aria-label="email" id="email-input" placeholder="Email Address" required type="email">
 					</li>
-					<li class="error">
+					<li>
 						<input aria-label="password" id="password-input" placeholder="Password" required
 						       type="password">
 					</li>
@@ -48,7 +45,7 @@
 				</ul>
 				<div>
 					<p id="terms-agreement">By clicking the button, you are agreeing to our
-						<span>Terms and Services</span>
+						<a href="#terms-of-service"><span>Terms and Services</span></a>
 					</p>
 				</div>
 			</form>

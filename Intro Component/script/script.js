@@ -1,45 +1,62 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const listItemList = document.getElementsByName("li");
-  const inputList = document.getElementsByName("input");
+  const listItemList = document.getElementsByTagName("li");
+  const inputList = document.getElementsByTagName("input");
+  const signUpButton = document.getElementById("signup-button");
+  const signUpForm = document.getElementById("signup-form");
+  let isSignUpFormValid = false;
 
-  // opacity & margin manage event listener
+  function checkInputValidity(i) {
+    // check input validity
+    if (inputList[i].checkValidity()) {
+      // if valid, remove error status
+      listItemList[i].classList.remove("error");
+      listItemList[i].classList.remove("email");
+      listItemList[i].classList.remove("text");
+      listItemList[i].style.setProperty("--before-content", "");
+      inputList[i].setAttribute("aria-invalid", "false");
+      isSignUpFormValid = true;
+    } else {
+      // if not valid add error status and ...
+      // email ? put email input field error message status
+      if (inputList[i].type === "email") {
+        listItemList[i].classList.add("email");
+      } else {
+        // other input field ? fillable error message
+        listItemList[i].classList.add("text");
+        // fill before content with placeholder information
+        listItemList[i].style.setProperty(
+          "--before-content",
+          `"${inputList[i].placeholder} cannot be empty"`
+        );
+      }
+      listItemList[i].classList.add("error");
+      inputList[i].setAttribute("aria-invalid", "true");
+      isSignUpFormValid = false;
+    }
+  }
+
   // check input validation
   for (let i = 0; i < inputList.length; i++) {
+    // check input & focus on inputs
     inputList[i].addEventListener("input", function () {
-      if (inputList[i].checkValidity()) {
-        listItemList[i].classList.remove("error");
-      } else {
-        listItemList[i].classList.add("error");
-      }
+      inputList[i].addEventListener("blur", function () {
+        checkInputValidity(i);
+      });
     });
   }
 
-  inputValidition.addEventListener("input", function () {
-    if (emailValidation.checkValidity()) {
-      emailInvalidError.style.opacity = "1";
-      emailInvalidError.style.margin = ".5em 0 1.5em 0";
-    } else {
-      emailInvalidError.style.opacity = "0";
-      emailInvalidError.style.margin = "0";
+  // check submit
+  signUpButton.addEventListener("submit", function (event) {
+    event.preventDefault();
+    for (let i = 0; i < inputList.length; i++) {
+      checkInputValidity(i);
     }
   });
 
-  // check user focus on input
-  emailValidation.addEventListener("blur", function () {
-    if (!emailValidation.checkValidity()) {
-      emailInvalidError.style.opacity = "1";
-      emailInvalidError.style.margin = ".5em 0 1.5em 0";
-      // error message
-      document.getElementById("email-invalid").innerHTML =
-        "Please provide a valid email address";
-      // screen-reader aria attribute error message
-      document
-        .getElementById("email-invalid")
-        .setAttribute("aria-describedby", "Invalid Email Adress");
-    } else {
-      emailInvalidError.style.opacity = "0";
-      emailInvalidError.style.margin = "0";
+  signUpForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    for (let i = 0; i < inputList.length; i++) {
+      checkInputValidity(i);
     }
   });
-  emailInvalidError.style.transition = "all 0.5s ease-in-out";
 });
