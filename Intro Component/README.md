@@ -1,6 +1,6 @@
 # Intro Component Page
 
-This is results summary component made with HTML, CSS & Javascript.
+This is results summary of intro component made with HTML, CSS & Javascript.
 
 ## Table of contents
 
