@@ -22,7 +22,7 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### The challenge
 
-Users should be able to:
+Users should be able to::
 
 - View an age in years, months, and days after submitting a valid date through the form
 - Receive validation errors if:
