@@ -12,7 +12,7 @@ This is results summary component made with HTML, CSS & Javascript.
 ### Links
 
 - Repository URL: [Github Repository](https://github.com/waldvoid/Front-end-Demos/tree/main/Article%20Preview%20Component)
-- Live Site URL: [Live Page](https://articlecomponent-merte.netlify.app)
+- Live Site URL: [Live Page](https://articlepreview-merte.netlify.app)
 
 ### Built with
 
