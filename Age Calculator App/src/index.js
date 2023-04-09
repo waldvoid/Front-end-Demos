@@ -62,7 +62,8 @@ function checkDateValidity(dayInput, dayListItem, monthInput, yearInput) {
 }
 
 function calculateResults(dayInput, monthInput, yearInput) {
-	const personalDateObject = new Date(`${Number(yearInput.value)}, ${Number(monthInput.value) - 1}, ${Number(dayInput.value)}`);
+	// safari compatibility, ISO format transformation with padStart
+	const personalDateObject = new Date(`${Number(yearInput.value)}-${Number(monthInput.value).toString().padStart(2, "0")}-${Number(dayInput.value).toString().padStart(2, "0")}`);
 	const currentDateObject = new Date();
 	const diffInAbs = Math.abs(currentDateObject - personalDateObject);
 	const totalDiffDays = Math.floor(diffInAbs / (1000 * 60 * 60 * 24));

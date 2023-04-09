@@ -14,10 +14,4 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
-.babelrc
-package.json
-package-lock.json
-webpack.config.js
-yarn.lock
-yarn 2.lock
 node_modules
