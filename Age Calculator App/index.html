@@ -7,32 +7,32 @@
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
           rel="stylesheet">
-    <link href="./assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="script/script.js"></script>
+    <link href="src/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="/src/css/style.css" rel="stylesheet">
+	<script src="./dist/main.js"></script>
 
-    <title>Age calculator app</title>
+	<title>Age calculator app</title>
 
 </head>
 <body>
 <div class="index-container">
     <div class="index-main">
-        <form class="age-calculator-container">
-            <div action="#" class="age-calculator-date">
+        <form class="age-calculator-container" novalidate >
+            <div class="age-calculator-date">
                 <ul>
-                    <li>
-                        <label for="age-calculator-date-day">Day</label>
-                        <input id="age-calculator-date-day" max="31" min="01" n name="day" placeholder="DD"
+                    <li class="date-input-field" id="age-calculator-date-day-li">
+                        <label for="age-calculator-date-day-i">Day</label>
+                        <input id="age-calculator-date-day-i"  class="empty" max="31" min="01" required name="day" placeholder="DD"
                                type="number">
                     </li>
-                    <li>
-                        <label for="age-calculator-date-month">Month</label>
-                        <input id="age-calculator-date-month" max="12" min="01" name="month" placeholder="MM"
+                    <li class="date-input-field">
+                        <label for="age-calculator-date-month-i">Month</label>
+                        <input id="age-calculator-date-month-i" class="empty" max="12" min="01" name="month" required placeholder="MM"
                                type="number">
                     </li>
-                    <li>
-                        <label for="age-calculator-date-year">Year</label>
-                        <input id="age-calculator-date-year" max="2023" min="1900" name="year" placeholder="YYYY"
+                    <li class="date-input-field">
+                        <label for="age-calculator-date-year-i">Year</label>
+                        <input id="age-calculator-date-year-i" class="empty" max="2023" min="999" name="year" required placeholder="YYYY"
                                type="number">
                     </li>
                 </ul>
@@ -40,7 +40,7 @@
             <div class="age-calculator-seperator">
                 <div class="seperator-line"></div>
                 <button class="seperator-arrow" id="submit-button" type="submit"><img alt="arrow showing age"
-                                                                                      src="assets/images/icon-arrow.svg">
+                                                                                      src="../src/images/icon-arrow.svg">
                 </button>
             </div>
             <div class="age-calculator-result">
