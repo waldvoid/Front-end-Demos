@@ -1,0 +1,1 @@
+import css from"../css/style.css";import html from"../../index.html";

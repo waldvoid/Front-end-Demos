@@ -1,10 +1,10 @@
 /* static font back-up*/
 @font-face {
     font-family: 'Inter Static';
-    src: url('/assets/fonts/static/Inter-Regular.ttf') format('ttf'),
-    url('/assets/fonts/static/Inter-Bold.ttf') format('ttf'),
-    url('/assets/fonts/static/Inter-ExtraBold.ttf') format('ttf'),
-    url('/assets/fonts/static/Inter-VariableFont_slnt,wght.ttf') format('ttf')
+    src: url('../assets/fonts/static/Inter-Regular.ttf') format('ttf'),
+    url('../assets/fonts/static/Inter-Bold.ttf') format('ttf'),
+    url('../assets/fonts/static/Inter-ExtraBold.ttf') format('ttf'),
+    url('../assets/fonts/static/Inter-VariableFont_slnt,wght.ttf') format('ttf')
 }
 
 html {
