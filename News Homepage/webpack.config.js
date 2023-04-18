@@ -1,10 +1,12 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: {
 		main: './src/script/script.js',
 		styles: './src/css/style.css',
@@ -13,7 +15,6 @@ module.exports = {
 	output: {
 		filename: 'js/[name].[contenthash].js',
 		path: path.resolve(__dirname, './dist'),
-		clean: true,
 
 	},
 	devServer: {
@@ -64,6 +65,11 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: './index.html',
 			filename: path.resolve(__dirname, 'dist', 'index.html'),
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{ from: './src/assets/images', to: 'img' },
+			],
 		}),
 	],
 };
