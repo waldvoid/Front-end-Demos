@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "functions": {
+    "/api/prompt/new": {},
+    "/api/prompt": {},
+    "/api/users/id/posts": {}
+  }
+}
