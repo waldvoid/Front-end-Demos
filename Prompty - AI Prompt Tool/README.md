@@ -1,6 +1,6 @@
 # Prompty - AI Prompt Tool Web Page
 
-Prompty is an AI Prompts Web Page that allows people to share the most useful prompts with each other about any topic. Made with next.js, reach & tailwind css.
+Prompty is an AI Prompts Web Page that allows people to share the most useful prompts with each other about any topic. Made with next.js, react & tailwind css.
 
 ## Table of contents
 
